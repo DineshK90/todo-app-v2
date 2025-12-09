@@ -1,7 +1,8 @@
 import { useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import TodoCard from '../components/TodoCard';
 import { TodoContext } from '../contexts/TodoContext';
+import TodoCard from '../components/TodoCard'
+
 
 export default function Home() {
   const todos = useContext(TodoContext).todos;
@@ -17,10 +18,10 @@ export default function Home() {
 
 function CardGroup({ todos }) {
   return todos.map((todo) => {
-    return (
+       return (
       <Col md={4} key={todo.id}>
-        <TodoCard todo={todo} />
-      </Col>
-    );
-  });
+     <TodoCard todo={todo}/>
+     </Col>
+  );
+})
 }
